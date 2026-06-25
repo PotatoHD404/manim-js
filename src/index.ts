@@ -29,6 +29,20 @@ export { createFisherMatrixEllipse } from "./fisher/matrix-ellipse";
 export { createFisherReparam } from "./fisher/reparam";
 export { createFisherGaussNewton } from "./fisher/gauss-newton";
 
+// Matrix-completion pack
+export { createMatrixAr1 } from "./matrix/ar1";
+export { createBlockVsSymbol } from "./matrix/block-vs-symbol";
+export { createCommonBit } from "./matrix/common-bit";
+export { createMatrixDempster } from "./matrix/dempster";
+export { createMatrixDichotomy } from "./matrix/dichotomy";
+export { createMatrixEffectiveRank } from "./matrix/effective-rank";
+export { createMatrixEquicorrelated } from "./matrix/equicorrelated";
+export { createMatrixNoisyBsc } from "./matrix/noisy-bsc";
+export { createMatrixRandomEnsembles } from "./matrix/random-ensembles";
+export { createRankQuantization } from "./matrix/rank-quantization";
+export { createSpectralFlatness } from "./matrix/spectral-flatness";
+export { createSymbolError } from "./matrix/symbol-error";
+
 import { CeCrossEntropyLossElement } from "./elements/ce-cross-entropy-loss";
 import { CeDecompositionElement } from "./elements/ce-decomposition";
 import { CeForwardReverseKlElement } from "./elements/ce-forward-reverse-kl";
@@ -41,6 +55,18 @@ import { FisherKlHessianElement } from "./elements/fisher-kl-hessian";
 import { FisherMatrixEllipseElement } from "./elements/fisher-matrix-ellipse";
 import { FisherReparamElement } from "./elements/fisher-reparam";
 import { FisherTwoFormsElement } from "./elements/fisher-two-forms";
+import { MatrixAr1Element } from "./elements/matrix-ar1";
+import { MatrixBlockVsSymbolElement } from "./elements/matrix-block-vs-symbol";
+import { MatrixCommonBitElement } from "./elements/matrix-common-bit";
+import { MatrixDempsterElement } from "./elements/matrix-dempster";
+import { MatrixDichotomyElement } from "./elements/matrix-dichotomy";
+import { MatrixEffectiveRankElement } from "./elements/matrix-effective-rank";
+import { MatrixEquicorrelatedElement } from "./elements/matrix-equicorrelated";
+import { MatrixNoisyBscElement } from "./elements/matrix-noisy-bsc";
+import { MatrixRandomEnsemblesElement } from "./elements/matrix-random-ensembles";
+import { MatrixRankQuantizationElement } from "./elements/matrix-rank-quantization";
+import { MatrixSpectralFlatnessElement } from "./elements/matrix-spectral-flatness";
+import { MatrixSymbolErrorElement } from "./elements/matrix-symbol-error";
 import { MleBetaBernoulliElement } from "./elements/mle-beta-bernoulli";
 import { MleGaussianShrinkageElement } from "./elements/mle-gaussian-shrinkage";
 import { MlePriorWashoutElement } from "./elements/mle-prior-washout";
@@ -49,29 +75,6 @@ import { PcaDistancesElement } from "./elements/pca-distances";
 import { PcaEigenwarpElement } from "./elements/pca-eigenwarp";
 import { PcaProjectionElement } from "./elements/pca-projection";
 import { PcaSpectrumElement } from "./elements/pca-spectrum";
-
-export {
-  CeCrossEntropyLossElement,
-  CeDecompositionElement,
-  CeForwardReverseKlElement,
-  CeMseVsBceGradientElement,
-  CeMseVsBceLossElement,
-  FisherCrbElement,
-  FisherCurvatureElement,
-  FisherGaussNewtonElement,
-  FisherKlHessianElement,
-  FisherMatrixEllipseElement,
-  FisherReparamElement,
-  FisherTwoFormsElement,
-  MleBetaBernoulliElement,
-  MleGaussianShrinkageElement,
-  MlePriorWashoutElement,
-  MleZeroCountElement,
-  PcaDistancesElement,
-  PcaEigenwarpElement,
-  PcaProjectionElement,
-  PcaSpectrumElement,
-};
 
 const REGISTRY: Array<[string, CustomElementConstructor]> = [
   ["pca-projection", PcaProjectionElement],
@@ -94,7 +97,54 @@ const REGISTRY: Array<[string, CustomElementConstructor]> = [
   ["fisher-matrix-ellipse", FisherMatrixEllipseElement],
   ["fisher-reparam", FisherReparamElement],
   ["fisher-gauss-newton", FisherGaussNewtonElement],
+  ["matrix-ar1", MatrixAr1Element],
+  ["matrix-block-vs-symbol", MatrixBlockVsSymbolElement],
+  ["matrix-common-bit", MatrixCommonBitElement],
+  ["matrix-dempster", MatrixDempsterElement],
+  ["matrix-dichotomy", MatrixDichotomyElement],
+  ["matrix-effective-rank", MatrixEffectiveRankElement],
+  ["matrix-equicorrelated", MatrixEquicorrelatedElement],
+  ["matrix-noisy-bsc", MatrixNoisyBscElement],
+  ["matrix-random-ensembles", MatrixRandomEnsemblesElement],
+  ["matrix-rank-quantization", MatrixRankQuantizationElement],
+  ["matrix-spectral-flatness", MatrixSpectralFlatnessElement],
+  ["matrix-symbol-error", MatrixSymbolErrorElement],
 ];
+
+export {
+  CeCrossEntropyLossElement,
+  CeDecompositionElement,
+  CeForwardReverseKlElement,
+  CeMseVsBceGradientElement,
+  CeMseVsBceLossElement,
+  FisherCrbElement,
+  FisherCurvatureElement,
+  FisherGaussNewtonElement,
+  FisherKlHessianElement,
+  FisherMatrixEllipseElement,
+  FisherReparamElement,
+  FisherTwoFormsElement,
+  MatrixAr1Element,
+  MatrixBlockVsSymbolElement,
+  MatrixCommonBitElement,
+  MatrixDempsterElement,
+  MatrixDichotomyElement,
+  MatrixEffectiveRankElement,
+  MatrixEquicorrelatedElement,
+  MatrixNoisyBscElement,
+  MatrixRandomEnsemblesElement,
+  MatrixRankQuantizationElement,
+  MatrixSpectralFlatnessElement,
+  MatrixSymbolErrorElement,
+  MleBetaBernoulliElement,
+  MleGaussianShrinkageElement,
+  MlePriorWashoutElement,
+  MleZeroCountElement,
+  PcaDistancesElement,
+  PcaEigenwarpElement,
+  PcaProjectionElement,
+  PcaSpectrumElement,
+};
 
 /**
  * Register the custom elements. Called automatically on import in a browser; the

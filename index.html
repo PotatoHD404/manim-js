@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pca-viz — interactive PCA explorables</title>
+    <link rel="stylesheet" href="/demo/style.css" />
+  </head>
+  <body>
+    <main class="prose">
+      <header>
+        <p class="eyebrow">pca-viz · demo</p>
+        <h1>The many sides of PCA, made interactive</h1>
+        <p class="lede">
+          The same eigendecomposition seen as a best linear approximation, a
+          maximum-variance projection, and a distance-preserving map. Each panel
+          below is a self-contained custom element — pure client-side, no server.
+        </p>
+      </header>
+
+      <section>
+        <h2>1 · Maximize the variance</h2>
+        <p>
+          The blue ellipse is the shape of the data; the gold arrows are its
+          eigenvectors. Drag the plane to spin the cream direction
+          <em>u</em>, or press <em>sweep</em>. The variance along <em>u</em>,
+          written <span class="m">uᵀΣu</span>, traces out the green curve below —
+          and its single peak sits exactly on the long eigenvector. Best linear
+          approximation and maximum variance are the same statement.
+        </p>
+        <pca-projection seed="20260621" points="220" angle="18"></pca-projection>
+      </section>
+
+      <section>
+        <h2>2 · The covariance is a transformation</h2>
+        <p>
+          Press <em>morph</em>. A round, isotropic cloud is pushed through
+          <span class="m">Σ½</span> into the data ellipse. Watch the gold
+          eigenvector lines: their direction never changes — points on them only
+          slide in and out — while the cream test vector turns off its original
+          span. That invariance is what makes them the principal axes.
+        </p>
+        <pca-eigenwarp seed="11" points="240"></pca-eigenwarp>
+      </section>
+
+      <footer>
+        <p>
+          Built on a small canvas scene engine with D3-style number planes and
+          KaTeX, in a 3Blue1Brown register. The remaining figures from the post —
+          scree plot, reconstruction error, decorrelation, distance preservation —
+          slot into the same primitives.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="/demo/main.ts"></script>
+  </body>
+</html>

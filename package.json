@@ -1,0 +1,59 @@
+{
+  "name": "manim-js",
+  "version": "0.1.0",
+  "description": "A Manim-style interactive-graphics engine for the web. ManimCommunity look (number plane, KaTeX labels, eased ValueTracker motion), pure client-side, framework-agnostic web components — no video, just live graphs. Ships with PCA and MLE/MAP scene packs.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "manim",
+    "manimcommunity",
+    "3blue1brown",
+    "math",
+    "visualization",
+    "interactive",
+    "explorable",
+    "katex",
+    "canvas",
+    "web-components"
+  ],
+  "homepage": "https://github.com/PotatoHD404/manim-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PotatoHD404/manim-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PotatoHD404/manim-js/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/manim-js.umd.cjs",
+  "module": "./dist/manim-js.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/manim-js.js",
+      "require": "./dist/manim-js.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "build:demo": "vite build --config vite.demo.config.ts",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "katex": "^0.16.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

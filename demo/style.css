@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light;
+  --ink: #1c2230;
+  --ink-soft: #55607a;
+  --paper: #fbfbfa;
+  --rule: #e6e6e2;
+  --link: #185fa5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 6rem;
+}
+
+.eyebrow {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 3.5rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.lede {
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+}
+
+p {
+  margin: 0 0 1.1rem;
+}
+
+a {
+  color: var(--link);
+}
+
+section {
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+pca-projection,
+pca-eigenwarp {
+  display: block;
+  margin: 1.75rem 0 0.5rem;
+}
+
+.m {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.95em;
+  color: var(--ink);
+}
+
+input[type="range"] {
+  accent-color: #4aa3ff;
+}
